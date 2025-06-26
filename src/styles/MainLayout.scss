@@ -3,28 +3,27 @@
   background-image: linear-gradient(to bottom, rgba(0,0,0,0.6),(rgba(0,0,0,0.9))), url(../assets/bg-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  // position: relative;
-  // .overlay{
-  //   width: 100%;
-  //   height: 100%;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   background-image: linear-gradient(to bottom, rgba(0,0,0,0.5),rgba(0,0,0,0.8));
-  // }
   header{
-    // position: absolute;
-    // top: 0;
-    // left: 50%;
-    // transform: translateX(-50%);
-    // z-index: 10;
     height: 100px;
     max-width: $large-size;
     margin: 0 auto;
+    @include flex-layout(row, space-between, center);
   }
   .logo-img{
     width: 200px;
-    // position: relative;
-    // z-index: 11;
+  }
+  .lang{
+    @include flex-layout();
+    gap: 1rem;
+    select{
+      padding: 0.5rem 1.3rem;
+      border-radius: 5px;
+      outline: none;
+      background-color: $bg-color;
+      color: $text-color
+    }
+    button{
+      @include btn-style();
+    }
   }
 }

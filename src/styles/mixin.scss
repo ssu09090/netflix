@@ -41,3 +41,13 @@
     transition: all 0.5s;
   }
 }
+@mixin tablet{
+  @media screen and (max-width:$medium-size){
+    @content;
+  }
+}
+@mixin mobile{
+  @media screen and (max-width:$small-size){
+    @content;
+  }
+}

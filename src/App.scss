@@ -1,8 +1,8 @@
 @import "./styles/font.scss";
 @import './styles/variable.scss';
+@import './styles/mixin.scss';
 @import './styles/global.scss';
 @import './styles/MainLayout.scss';
-@import './styles/mixin.scss';
 @import './styles/Main.scss';
 @import './styles/Membership.scss';
 @import './styles/Login.scss';
@@ -10,3 +10,4 @@
 @import './styles/MovieList.scss';
 @import './styles/WhyJoin.scss';
 @import './styles/FAQ.scss';
+@import './styles/Footer.scss'

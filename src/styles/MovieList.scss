@@ -41,6 +41,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 15;
     cursor: pointer;
     &:hover {
       background-color: #444;
@@ -48,9 +49,11 @@
   }
   .btn-prev {
     left: -50px;
+    @include tablet {left: -10px;}
   }
   .btn-next {
     right: -50px;
+    @include tablet {right: -10px;}
   }
 }
 .movie-popup {

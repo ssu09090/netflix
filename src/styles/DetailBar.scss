@@ -2,20 +2,60 @@
   @include flex-layout(row);
   gap: 2rem;
   transition: all 0.5s;
-  &:hover{
-    transform: scale(1.05);
+  @include tablet{
+    flex: 1;
+    flex-direction: column;
+    align-items: start;
+    gap: 0;
   }
+  &:hover {
+    transform: scale(1.05);
+    background-image: lighten (#691092, #4605df, 10%);
+  }
+}
+.icon-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #D869C850 0%, #ffffff30 50%, #ffffff00 75%)
+      no-repeat top center,
+    #111;
+  background-size: 110% 70%;
+  @include flex-layout();
+  position: relative;
+}
+.icon-circle::before {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  content: "";
+  width: 80px;
+  height: 10px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #D869C850 0%, #ffffff30 50%, #ffffff00 75%);
 }
 .detail-icon {
   font-size: 60px;
+  color: #ff7c55;
+  z-index: 1;
 }
 .detail-txt {
   font-size: $font-medium;
   border-radius: 10px;
   padding: 0.5rem 1rem;
-  background-image: linear-gradient(45deg, #691092, #4605df);
+  background-image: linear-gradient(45deg, #69109250, #4605df50);
   flex: 1;
   @include flex-layout(row);
+  @include tablet{
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  &:hover {
+    background-image: lighten (#691092, #4605df, 10%);
+  }
   p {
     flex: 1;
   }
