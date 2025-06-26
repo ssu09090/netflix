@@ -20,7 +20,7 @@ const reasons = [
     id: 3,
     title: "다양한 디바이스로 시청하세요",
     desc: "각종 영화와 시리즈를 스마트폰, 태블릿, 노트북, TV에서 무제한으로 스트리밍하세요.",
-    icon: <GiSpyglass />,
+    icon: <GiSpyglass className="flip-icon" />,
   },
   {
     id: 4,

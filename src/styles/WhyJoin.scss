@@ -11,7 +11,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
     @include mobile {
-    display: flex;
+      display: flex;
       flex-direction: column;
     }
     gap: 1rem;
@@ -45,6 +45,10 @@
         position: absolute;
         bottom: 5px;
         right: 20px;
+        color: #fe94a4;
+      }
+      .flip-icon {
+        transform: scaleY(-1);transform-origin: center;
       }
     }
   }

@@ -2,7 +2,7 @@
   @include flex-layout(row);
   gap: 2rem;
   transition: all 0.5s;
-  @include tablet{
+  @include tablet {
     flex: 1;
     flex-direction: column;
     align-items: start;
@@ -10,14 +10,19 @@
   }
   &:hover {
     transform: scale(1.05);
-    background-image: lighten (#691092, #4605df, 10%);
   }
 }
+//, #4605df
 .icon-circle {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  background: radial-gradient(circle at center, #D869C850 0%, #ffffff30 50%, #ffffff00 75%)
+  background: radial-gradient(
+        circle at center,
+        #d869c850 0%,
+        #ffffff30 50%,
+        #ffffff00 75%
+      )
       no-repeat top center,
     #111;
   background-size: 110% 70%;
@@ -26,35 +31,43 @@
 }
 .icon-circle::before {
   position: absolute;
-  bottom: 8px;
+  bottom: 5px;
   left: 0;
   content: "";
-  width: 80px;
+  width: 90px;
   height: 10px;
   border-radius: 50%;
-  background: radial-gradient(circle at center, #D869C850 0%, #ffffff30 50%, #ffffff00 75%);
+  background: radial-gradient(
+    circle at center,
+    #d869c850 0%,
+    #ffffff30 50%,
+    #ffffff00 75%
+  );
 }
 .detail-icon {
-  font-size: 60px;
+  font-size: 65px;
   color: #ff7c55;
   z-index: 1;
 }
 .detail-txt {
   font-size: $font-medium;
   border-radius: 10px;
-  padding: 0.5rem 1rem;
-  background-image: linear-gradient(45deg, #69109250, #4605df50);
+  line-height: 1.3;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(45deg, #69109250, #4605df50);
+
+  &:hover {
+    background-image: linear-gradient(
+      45deg, #69109290, #4605df90)
+  }
   flex: 1;
   @include flex-layout(row);
-  @include tablet{
+  @include tablet {
     width: 100%;
     flex-direction: column;
     align-items: start;
     gap: 1rem;
     padding: 1rem;
-  }
-  &:hover {
-    background-image: lighten (#691092, #4605df, 10%);
   }
   p {
     flex: 1;
