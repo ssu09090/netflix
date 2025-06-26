@@ -1,0 +1,57 @@
+#login-page {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  font-size: $font-small;
+  @include flex-layout();
+  .login-wrap {
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem 3rem;
+    border-radius: 5px;
+    * {
+      display: block;
+      margin: 1rem 0;
+    }
+    h2 {
+      font-size: $font-large;
+    }
+    label:nth-of-type(1),
+    label:nth-of-type(2) {
+      @include floation-label;
+    }
+    .error {
+      color: $main-color;
+    }
+    button:nth-of-type(1) {
+      @include btn-style();
+      width: 100%;
+    }
+    button:nth-of-type(2) {
+      @include btn-style(#66666690);
+      width: 100%;
+    }
+    p {
+      text-align: center;
+    }
+    .error{
+      text-align: left;
+    }
+    a {
+      text-align: center;
+      text-decoration: underline;
+    }
+    label:nth-of-type(3) {
+      display: flex;
+      gap: 10px;
+    }
+    .sign-up {
+      p {
+        text-align: left;
+      }
+      strong {
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@mixin flex-layout($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+@mixin btn-style($bg: $main-color, $font: $font-small) {
+  background-color: $bg;
+  border-radius: 3px;
+  color: $text-color;
+  font-size: $font;
+  border: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+@mixin floation-label {
+  position: relative;
+  cursor: text;
+  input {
+    font-size: $font-medium;
+    color: $text-color;
+    padding: 15px 10px 6px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    caret-color: #fff;
+    width: 100%;
+  }
+  input:focus + span,
+  input:valid + span {
+    top: -12px;
+    font-size: 10px;
+  }
+  span {
+    color: #888;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transition: all 0.5s;
+  }
+}

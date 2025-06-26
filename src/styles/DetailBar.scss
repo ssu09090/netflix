@@ -1,0 +1,58 @@
+.detail-bar {
+  @include flex-layout(row);
+  gap: 2rem;
+  transition: all 0.5s;
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+.detail-icon {
+  font-size: 60px;
+}
+.detail-txt {
+  font-size: $font-medium;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(45deg, #691092, #4605df);
+  flex: 1;
+  @include flex-layout(row);
+  p {
+    flex: 1;
+  }
+  button {
+    @include btn-style(#777);
+  }
+}
+.curve-wrap {
+  position: relative;
+  top: 0;
+  height: 50px;
+  overflow: hidden;
+  div {
+    border-top-left-radius: 90% 100%;
+    border-top-right-radius: 90% 100%;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0;
+  }
+  .curve-circle {
+    top: 5px;
+    z-index: 6;
+    background: radial-gradient(
+        50% 500% at 50% -420%,
+        rgba(64, 97, 231, 0.3) 80%,
+        rgba(16, 16, 16, 0.1) 100%
+      ),
+      $bg-color;
+  }
+  .gradient-line {
+    top: 0;
+    background: radial-gradient(
+      circle,
+      rgba(255, 0, 84, 1) 0%,
+      rgba(255, 44, 115, 0.6) 80%,
+      rgba(63, 0, 181, 0.3) 100%
+    );
+  }
+}

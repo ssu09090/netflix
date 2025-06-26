@@ -1,0 +1,10 @@
+//  reset
+
+*{ margin: 0; padding: 0; box-sizing: border-box;}
+body{
+  background-color: $bg-color;
+  color: $text-color;
+  word-break: keep-all;
+}
+a{text-decoration: none; color: inherit;}
+li{list-style: none;}
